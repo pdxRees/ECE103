@@ -2,6 +2,16 @@
 
 #include <stdio.h>
 
+int FindRandom (void){
+	srand(time(0));
+	int random = (rand() % 8);
+	
+	return random;
+}
+
+int FindDistance (int entX, int entY, int klingX, int klingY){
+    int double
+
 int main()
 {
     //int variables         
@@ -49,6 +59,23 @@ int main()
     
     //char variables
     
+    
+    
+    //***LINE 220***
+	printf("                                    ,------*------,");
+    printf("                    ,-------------   '---  ------'");
+	printf("                     '-------- --'      / /");
+	printf("                         ,---' '-------/ /--,");
+	printf("                          '----------------'");
+	printf("                    THE USS ENTERPRISE --- NCC-1701");
+    
+
+    
+    //***LINE 480*** Initialize Enterprise's Position 
+	entQuad1 = FindRandom;
+	entQuad2 = FindRandom;
+	entSect1 = FindRandom;
+	entSect2 = FindRandom;
 
     return 0;
 }
