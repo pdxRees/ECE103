@@ -35,7 +35,7 @@ BY USING "?" INSTEAD OF "PRINT " WHEN ENTERING LINES
 
 
 
-int game(GameVariables *game_vars)
+int game(GameVariables *gameVars)
 {
 	/*
 	The game function will hold the main game loop
@@ -43,7 +43,7 @@ int game(GameVariables *game_vars)
 	*/
 
 	printf("\ngame loop\n");
-	initialize(game_vars);
+	initialize(gameVars);
 
 }
 
@@ -54,7 +54,7 @@ int main()
 	/*
 	The Main Loop
 	*/
-	GameVariables game_vars;
+	GameVariables gameVars;
 
 
 	// // INIT variables
@@ -78,20 +78,20 @@ int main()
 
 	
 
-	bool main_loop = true;
-	int loop_count = 0;
-	while(main_loop)
+	bool mainLoop = true;
+	int loopCount = 0;
+	while(mainLoop)
 	{
-		if(loop_count<1)
+		if(loopCount<1)
 		{
 			intro();
-			game(&game_vars);
+			game(&gameVars);
 		}
 		else
 		{
-			main_loop = false;
+			mainLoop = false;
 		}
-		loop_count++;
+		loopCount++;
 	}
 	printf("E N D\n");
 

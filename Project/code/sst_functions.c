@@ -39,11 +39,11 @@ void intro(void)
 	if (resp[0] == 'y' || resp[0] == 'Y')
 	{	
 		FILE *file;
-		char file_c;	
+		char fileC;	
 		file = fopen("test.txt","r");
-		while((file_c=fgetc(file))!=EOF)
+		while((fileC=fgetc(file))!=EOF)
 		{
-			printf("%c",file_c);
+			printf("%c",fileC);
 		}
 	}
 	// Print the Enterprise	
@@ -57,83 +57,83 @@ void intro(void)
 }
 
 
-void clear(GameVariables *game_vars)
+void clear(GameVariables *gameVars)
 {
 	//Initializing time
-	game_vars->stardate_curr=(int)(rand()*20+20)*100;
-	game_vars->stardate_start=stardate_curr
-	game_vars->stardate_end = 25+(int)(rand()*10) 
+	gameVars->stardateCurr=(int)(rand()*20+20)*100;
+	gameVars->stardateStart=stardateCurr
+	gameVars->stardateEnd = 25+(int)(rand()*10) 
 
 	//Initialize Enterprise
-	game_vars->dock_flag 		= 0;
-	game_vars->start_energy 	= 3000;
-	game_vars->curr_energy 		= game_vars->start_energy;
-	game_vars->torp_cap 		= 10;
-	game_vars->torp_left 		= game_vars->torp_cap;
-	game_vars->shields 			= 0;
-	game_vars->kling_pow 		= 200;
-	game_vars->kling_left 		= 0;
-	game_vars->starbase_total 	= 2;
+	gameVars->dockFlag 		= 0;
+	gameVars->startEnergy 	= 3000;
+	gameVars->currEnergy 		= gameVars->startEnergy;
+	gameVars->torpCap 		= 10;
+	gameVars->torpLeft 		= gameVars->torpCap;
+	gameVars->shields 			= 0;
+	gameVars->klingPow 		= 200;
+	gameVars->klingLeft 		= 0;
+	gameVars->starbaseTotal 	= 2;
 
 
 
 }
 
 
-void initialize(GameVariables *game_vars)
+void initialize(GameVariables *gameVars)
 {
 	/*
 	Initializes the game variables
 	*/
 
 	// Initialize Time
-	game_vars->stardate_curr = 
+	gameVars->stardateCurr = 
 
 	// Initialize Enterprise
-	game_vars->dock_flag = 0;
-	game_vars->start_energy = 3000;
-	game_vars->curr_energy = game_vars->start_energy;
-	game_vars->torp_cap = 10;
-	game_vars->torp_left = game_vars->torp_cap;
-	game_vars->shields = 0;
+	gameVars->dockFlag = 0;
+	gameVars->startEnergy = 3000;
+	gameVars->currEnergy = gameVars->startEnergy;
+	gameVars->torpCap = 10;
+	gameVars->torpLeft = gameVars->torpCap;
+	gameVars->shields = 0;
 
 
-	printf("%d",&game_vars);
+	printf("%d",&gameVars);
 
 }
 
-void event_handler(GameVariables *game_vars)
+void event_handler(GameVariables *gameVars)
 {
 	/*
 	Initializes the game variables
 	*/
 
 	//Initialize Time
-	if(strcmp(game_vars->command,"nav")==0)
+	if(strcmp(gameVars->command,"nav")==0)
 	{
 		printf("nav function\n");
 	}
-	else if (strcmp(game_vars->command,"srs")==0)
+	else if (strcmp(gameVars->command,"srs")==0)
 	{
 		printf("srs function\n");		
 	}
-	else if (strcmp(game_vars->command,"lrs")==0)
+	else if (strcmp(gameVars->command,"lrs")==0)
 	{
 		printf("lrs function\n");		
 	}
-	else if (strcmp(game_vars->command,"pha")==0)
+	else if (strcmp(gameVars->command,"pha")==0)
 	{
 		printf("pha function\n");		
 	}
-	else if (strcmp(game_vars->command,"tor")==0)
+	else if (strcmp(gameVars->command,"tor")==0)
 	{
 		printf("tor function\n");		
 	}
-	else if (strcmp(game_vars->command,"she")==0)
+	else if (strcmp(gameVars->command,"she")==0)
 	{
 		printf("she function\n");		
 	}
-	else if (strcmp(game_vars->command,"com")==0)
+	else if (strcmp(gameVars->command,"com")==0)
 	{
 		printf("com function\n");		
 	}
